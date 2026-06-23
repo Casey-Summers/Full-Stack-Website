@@ -7,7 +7,10 @@ FROM node:26-bookworm-slim
 WORKDIR /Casey_Full_Stack_Website
 
 # Copy the app requirements into the container's root
-COPY npm install
+COPY package*.json ./
+
+# Installs node dependencies base on the selected runtime interpreter
+RUN npm install
 
 # Copy from the root of the build directory to the working diredtory
 COPY . .
@@ -17,4 +20,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Executable to run by default when the container is provisioned
-CMD [ "executable" ]
+CMD ["npm", "start"]

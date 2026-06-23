@@ -1,0 +1,12 @@
+{
+    "name": "casey-full-stack-app",
+    "version": "1.0.0",
+    "description": "Casey's Example Full Stack Website",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
