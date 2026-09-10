@@ -7,7 +7,9 @@ const port = 8080;
 
 app.get('/', (req, res) => {
     // res.send('Hello World!') // Sends simple text directly
-    res.sendFile(path.join(__dirname, "src", "pages", "/index.html"));
+
+    res.sendFile(path.join(__dirname, "/index.html"));
+    // res.sendFile(path.join(__dirname, "src", "pages", "/index.html"));
 });
 
 app.listen(port, () => {
